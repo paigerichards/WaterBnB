@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Book now', new_booking_path(listing: @listing.id) %>
+
+<p>
+  <strong>Hosted by:</strong>
+  <%= @listing.host.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @listing.full_address %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @listing.country.emoji_flag %>
+  <%= @listing.country.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @listing.price %>
+</p>
+
+<p>
+  <strong>Max guests:</strong>
+  <%= @listing.max_guests %>
+</p>
+
+<p>
+  <strong>Rooms:</strong>
+  <%= @listing.rooms %>
+</p>
+
+<p>
+  <strong>Beds:</strong>
+  <%= @listing.beds %>
+</p>
+
+<p>
+  <strong>Shared:</strong>
+  <%= @listing.shared %>
+</p>
+
+<p>
+  <strong>Min nights:</strong>
+  <%= @listing.min_nights %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @listing.description %>
+</p>
+
+<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Back', listings_path %>

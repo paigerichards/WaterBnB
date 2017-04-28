@@ -1,0 +1,44 @@
+<%= form_for(booking) do |f| %>
+  <% if booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+      <% booking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<% f.hidden :listing_id %>
+
+  <div class="field">
+    <%= f.label :check_in_at %>
+    <%= f.date_select :check_in_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :check_out_at %>
+    <%= f.date_select :check_out_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :guest_count %>
+    <%= f.number_field :guest_count %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :special_requirement %>
+    <%= f.text_area :special_requirement %>
+  </div>
+
+  <div class="actions">
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="A month's subscription"
+            data-amount="500"
+            data-locale="auto"></script>
+  </div>
+<% end %>

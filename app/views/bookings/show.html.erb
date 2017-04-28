@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Guest:</strong>
+  <%= @booking.guest.email %>
+</p>
+
+<p>
+  <strong>Listing:</strong>
+  <%= @booking.listing.full_address %>
+</p>
+
+<p>
+  <strong>Check in at:</strong>
+  <%= @booking.check_in_at %>
+</p>
+
+<p>
+  <strong>Check out at:</strong>
+  <%= @booking.check_out_at %>
+</p>
+
+<p>
+  <strong>Guest count:</strong>
+  <%= @booking.guest_count %>
+</p>
+
+<p>
+  <strong>Stripe charge:</strong>
+  <%= @booking.stripe_charge_id %>
+</p>
+
+<p>
+  <strong>Special requirement:</strong>
+  <%= @booking.special_requirement %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>
