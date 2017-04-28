@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  host: one
+  price: 9.99
+  long: 9.99
+  lat: 9.99
+  address: MyString
+  city: MyString
+  state: MyString
+  country_code: MyString
+  max_guests: 1
+  rooms: 1
+  beds: 1
+  shared: false
+  min_nights: 1
+  description: MyText
+
+two:
+  host: two
+  price: 9.99
+  long: 9.99
+  lat: 9.99
+  address: MyString
+  city: MyString
+  state: MyString
+  country_code: MyString
+  max_guests: 1
+  rooms: 1
+  beds: 1
+  shared: false
+  min_nights: 1
+  description: MyText

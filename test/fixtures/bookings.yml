@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  guest: one
+  listing: one
+  check_in_at: 2017-04-28
+  check_out_at: 2017-04-28
+  guest_count: 1
+  stripe_charge_id: MyString
+  special_requirement: MyText
+
+two:
+  guest: two
+  listing: two
+  check_in_at: 2017-04-28
+  check_out_at: 2017-04-28
+  guest_count: 1
+  stripe_charge_id: MyString
+  special_requirement: MyText
